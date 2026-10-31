@@ -135,7 +135,7 @@ button:hover{transform:translateY(-3px)}
   </div>
  </main>
 </section>
- <audio id="bgmusic" autoplay loop>
+ <audio id="pikaAudio" loop>
   <source src="pika-pika%20(1).mp3" type="audio/mpeg">
 </audio>
 <script>
@@ -147,15 +147,15 @@ function reveal(name,emoji){
  document.getElementById('resultTitle').textContent='You picked '+name+' '+emoji;
  showScreen('result');
 }
-function playUploadedAudio(){
- const audio=document.getElementById('pikaAudio');
- audio.currentTime=0;
- audio.play().catch(()=>{});
+function playUploadedAudio() {
+    const audio = document.getElementById('pikaAudio');
+    audio.currentTime = 0;
+    audio.play().catch(error => console.log(error));
 }
-window.addEventListener('load',()=>{
- const audio=document.getElementById('pikaAudio');
- audio.play().catch(()=>{});
-});
+
+document.addEventListener('click', function() {
+    playUploadedAudio();
+}, { once: true });`
 </script>
 </body>
 </html>
