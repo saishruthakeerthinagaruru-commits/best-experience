@@ -65,7 +65,7 @@ button:hover{transform:translateY(-3px)}
   <div class="speech">Hiiii! 👋⚡</div>
   <p><button class="secondary" onclick="playUploadedAudio()">🔊 Play Pikachu audio</button></p>
   <p style="font-size:.82rem;color:#8b8491">If automatic sound is blocked, tap “Play Pikachu audio” once.</p>
-  <button onclick="showScreen('choose')">START ▶</button>
+  <button onclick="document.getElementById('home').classList.remove('active'); document.getElementById('choose').classList.add('active')">START ▶</button>
  </main>
 </section>
 
